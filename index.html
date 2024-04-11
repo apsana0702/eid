@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishing</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-image: url("aizu.jpeg");
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            background-size: contain;
+        }
+
+        #happyButton {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 70px;
+            background-color: blue;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #happyImage {
+            display: none;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Set max-width to 100% of viewport width */
+    max-height: calc(100vh - 200px); /* Set max-height to 80% of viewport height with padding */
+    object-fit: contain; /* Contain within the container without distortion */
+    padding: 20px; /* Padding around the image */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="happyButton">
+        <img src="./aizu.jpeg" alt="image" height="500px" width="1000px">
+    </div>   
+    <button onclick="displayImage()">Click me</button>
+
+    <img id="happyImage" src="" alt="Happy Ramazan Image">
+
+    <script>
+        function displayImage() {
+            var image = document.getElementById("happyImage");
+            var button = document.getElementById("happyButton");
+            
+            // Toggle image display
+            if (image.style.display === "none") {
+                //image.src = "https://i.pinimg.com/736x/fe/67/d5/fe67d5686072bf46dca1dfd1c0c9adf1.jpg";  Path to your image
+                image.src = "https://images.hindustantimes.com/img/2022/04/28/original/Eid3_1651175859006.jpg"
+                image.style.display = "block";
+                button.style.display = "none"; // Hide the button
+            } else {
+                image.style.display = "none";
+                button.style.display = "block"; // Show the button again
+            }
+        }
+    </script>
+</body>
+</html>
